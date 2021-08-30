@@ -2,202 +2,314 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Akumos</title>
-  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
-  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <div class="loader"></div>
-  <div id="myDiv">
-    <!--HEADER-->
-    <div class="header">
-      <div class="bg-color">
-        <header id="main-header">
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                <a class="navbar-brand" href="#">Aku<span class="logo-dec">mos</span></a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="#main-header">Home</a></li>
-                  <li class=""><a href="#feature">How</a></li>
-                  <li class=""><a href="#download">Download</a></li>
-                  <li class=""><a href="#contact">Channels</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-        <div class="wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="banner-info text-center wow fadeIn delay-05s">
-                <h1 class="bnr-title">test, automate and <span>integrate</span></h1>
-                <h2 class="bnr-sub-title">Swing Applications</h2>
-                <p class="bnr-para">Use Akumo Cross Script Platform with the Akumo Swing Library to write simple script
-                  <br>test, automate and integrate your Swing Application.</p>
-                <div class="brn-btn">
-                  <a href="#feature" class="btn btn-download">How it works</a>
-                  <a href="#download" class="btn btn-more">Download</a>
-                </div>
-                <div class="overlay-detail">
-                  <a href="#feature"><i class="fa fa-angle-down"></i></a>
-                </div>
-              </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top"
+    style="color: #FDEBD0 !important;background-color: #273746    !important;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span style="color: #FDEBD0 ;"><b>Apedrina</b></span></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" style="color: white !important;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('./img/bg.png')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 style="color:whitesmoke">OpenBanking</h3>
+            <p>integrações e implementação</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('./img/bg2.png')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 style="color:whitesmoke">Marketplace</h3>
+            <p>integrações e gerenciamento.</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('./img/bg3.png')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Social Medias</h3>
+            <p>integrações, análises de dados e outros.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4"></h1>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header" style="background-color: #2E4053;color: white;">Open Banking</h4>
+          <div class="card-body" style="background-color: #F2F3F4 !important;">
+            <p class="card-text">O Open Banking ou Sistema Financeiro Aberto é uma iniciativa do Banco Central do Brasil
+              que tem como principais objetivos trazer inovação
+              ao sistema financeiro, promover a concorrência, e melhorar a oferta de produtos e serviços financeiros
+              para o consumidor.
+              Nós temos o expertise e dominamos as tecnologias necessárias para realizar integrações e para implementar
+              o OpenBanking em seus
+              projetos. </p>
+          </div>
+          <div class="card-footer" style="background-color: #2E4053 !important;">
+            <a href="#openbank" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header" style="background-color: #2471A3;color: white;">Marketplace</h4>
+          <div class="card-body" style="background-color: #F2F3F4 !important;">
+            <p class="card-text">
+              Ofereça seus produtos para quem já é cliente Americanas, do Submarino, da Shoptime, da Amazon, da Magalu,
+              do Mercado Livre e de muitos
+              outros grandes players do mercado.
+              Nós ajudamos sua empresa a aumentar o faturamento e damos mais visibilidade para o seu negócio. Tudo isso
+              graças ao
+              nosso knowhow em integrações e Marketplace.
+
+            </p>
+          </div>
+          <div class="card-footer" style="background-color: #2471A3 !important;">
+            <a href="#markteplace" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header" style="background-color: #45B39D;color:white;">Social Medias</h4>
+          <div class="card-body" style="background-color: #F2F3F4 !important;">
+            <p class="card-text">
+              Para que uma campanha de marketing digital funcione ou para monitoramento e análise de crises, é
+              necessário
+              a utilização de ferramentas para impulsionar e monitorar o seu conteúdo em diversas redes sociais. Para
+              tanto nós nos valemos
+              de uma plataforma desenvolvida in-house para monitorar, analisar e facilitar as integrações com as mais
+              diversas redes sociais.
+
+            </p>
+          </div>
+          <div class="card-footer" style="background-color: #45B39D  !important;">
+            <a href="#redes" class="btn btn-primary">Saiba mais</a>
           </div>
         </div>
       </div>
     </div>
-    <!--/ HEADER-->
-    <!---->
-    <section id="feature" class="section-padding wow fadeIn delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/ser02.png">
-              </div>
-              <h3 class="pad-bt15">Subscribe</h3>
-              <p>First of all, download the akumo's binary trial, then test it.If you liked it send a email to <b>pedrina.alisson@gmail.com</b> asking for your production akumo binary.
-                You'll receive a paypal link and after you'll receive the link with either binaries and keys.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/spring.png">
-              </div>
-              <h3 class="pad-bt15">Vis-a-Vis</h3>
-              <p>When you make your subscription to receive etheir the binaries and keys, you also gain a workshop by skype to learn how use Akumo Swing Library, to clarify doubts about installation or to set up the binaries. 
-                This workshop lasts arround two (2) hours. 
-                
-              </thead></p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/dev.png">
-              </div>
-              <h3 class="pad-bt15">Support</h3>
-              <p>When you make your subscription besides the binaries with no restriction about installation and the workshop, you also gain a support by email and skype for one year.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/opensource.png">
-              </div>
-              <h3 class="pad-bt15">Documentation</h3>
-              <p>All documentation learing how use Akumo Swing Library (installation, api documentation and examples) could be found in our GitHub Wiki. Access it clicking here.</p>
-            </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
+    <!--h2>Para desenvolvedores</h2>
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project One</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
           </div>
         </div>
       </div>
-    </section>
-    <!---->
-    <!---->
-    <section id="download" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2 class="service-title pad-bt15">Download</h2>
-            <p class="sub-title pad-bt15">You can finding the binary for: windows, linux and mac. Just click on the links bellow</p>
-            
-            <p>
-              <div class="loction-info gray">
-                <p>
-                <i class="fa fa-windows fa-fw pull-center fa-2x"></i><i>windows</i>
-                </p>
-                <p><i class="fa fa-linux fa-fw pull-center fa-2x"></i>
-                <i>linux</i>
-                </p>
-                <p>
-                  <i class="fa fa-apple fa-fw pull-center fa-2x"></i>
-                  <i>mac</i>
-                </p>
-                
-              </div>
-            </p>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <section id="contact" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center white">
-            <h2 class="service-title pad-bt15">Channels</h2>
-            <p class="sub-title pad-bt15">Fell free to asking any doubt or information on one of our official channels.</p>
-            <hr class="bottom-line white-bg">
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="loction-info white">
-              <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Luxembourg</p>
-              <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>pedrina.alisson@gmail.com</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="loction-info white">
-              <p><i class="fa fa-linkedin fa-fw pull-left fa-2x"></i>
-                <b><a href="https://www.linkedin.com/in/alisson-pedrina">https://www.linkedin.com/in/alisson-pedrina</a></b>
-                
-                </p>
-              <p><i class="fa fa-github fa-fw pull-left fa-2x"></i>
-                <b><a href="https://github.com/apedrina">https://github.com/apedrina</a></b>
-                
-              </p>
-            </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Two</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           </div>
         </div>
       </div>
-    </section>
-    <!---->
-    <!---->
-    <footer id="footer">
-      <div class="container">
-        <div class="row text-center">
-          <p>&copy; Akumos. All Rights Reserved.</p>
-          <div class="credits">
-            Designed by <b>Akumos</b>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Three</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
           </div>
         </div>
       </div>
-    </footer>
-    <!---->
+    </div-->
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div class="row" id="servicos">
+      <div class="col-lg-6" id="openbank">
+        <h2>OpenBanking Brasil</h2>
+        <br>
+        <p>Nós realizamos a implementação e integração com o OpenBanking Brasil.
+          Saiba mais sobre a tecnologia que vai revolucionar o mercado financeiro brasileiro:</p>
+        <ul>
+          <li>
+            <strong>Links</strong>
+          </li>
+          <li>https://openbankingbrasil.org.br/</li>
+          <li>https://www.youtube.com/watch?v=rs0D8KgOpLo</li>
+          <li>https://www.youtube.com/watch?v=fZULrWL4TzM</li>
+        </ul>
+        <p>
+          Conte conosco para fazer essa revolução do OpenBanking se tornar uma realidade em teus planos.
+
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="img/openbank.jpg" alt="">
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Features Section -->
+    <div class="row" id="markteplace">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="img/marketplace.png" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2>Marketplace</h2>
+        <br>
+        <p>Através de nossas integrações com marketplaces seus produtos terão
+          vitrine nos maiores players do Brasil através.
+        </p>
+        <ul>
+          <li>
+            <strong>Seus produtos nos seguintes sites:</strong>
+          </li>
+          <li>Lojas Americanas</li>
+          <li>Mercado Livre</li>
+          <li>Magalu</li>
+          <li>muitos outros</li>
+        </ul>
+        <p>
+          Nosso time técnico se encarega de colocar seus produtos nesses bigs players e o nosso jurídico
+          te ajuda com toda burocracia.
+
+        </p>
+      </div>
+
+    </div>
+
+    <hr>
+    <!-- Features Section -->
+    <div class="row" id="redes">
+      <div class="col-lg-6">
+        <h2>Redes sociais</h2>
+        <br>
+        <p>Hoje o mundo converge para as redes sociais, esteja sempre seguro de que seus negócios estão usufruindo o
+          máximo
+          potencial dessas redes.
+        </p>
+        <ul>
+          <li>
+            <strong>Nossas integrações:</strong>
+          </li>
+          <li>gerenciamento de crise</li>
+          <li>integração dentro de seu software ou app</li>
+          <li>análise de dados</li>
+          <li>filter advisors</li>
+        </ul>
+        <p>
+          Nossas integrações e análises abrangem todas as principais redes sociais.
+
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="img/socialmidia.png" alt="">
+      </div>
+
+    </div>
+
+
   </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/wow.js"></script>
-  <script src="js/jquery.bxslider.min.js"></script>
-  <script src="js/custom.js"></script>
+  <hr>
+
+
+
+
+  <!-- Call to Action Section -->
+  <!--div class="row mb-4">
+      <div class="col-md-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+      </div>
+    </div-->
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Apedrina 2021</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
