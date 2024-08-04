@@ -1,798 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>YOOGA - na Guarda</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<!doctype html>
+<html lang="pt-br" class="h-100">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Akumos Platform - Web.</title>
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Principal CSS do Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/highlight-in-textarea.css" rel="stylesheet">
+    <script src="dist/js/highlight-in-textarea.js"></script>
+   
+</head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+<body class="d-flex flex-column h-100">
 
-    <body>
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-bar-left">
-                            <div class="text">
-                                <i class="far fa-clock"></i>
-                                <h2>8:00 - 9:00</h2>
-                                <p>Segunda - Sexta</p>
-                            </div>
-                            <div class="text">
-                                <i class="fa fa-phone-alt"></i>
-                                <h2>+55 99225 6172</h2>
-                                <p>Para reservas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<header>
+    <!-- Navbar fixa -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Akumos Platform</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="sr-only">dashboard</span></a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+            </form>
         </div>
-        <!-- Top Bar End -->
+    </nav>
+</header>
 
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Y<span>oo</span>ga</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+<div class="modal fade" id="akumosModal" tabindex="-1" role="dialog" aria-labelledby="akumosModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="akumosModalLabel">Console Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
                 </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre</a>
-                        <a href="service.html" class="nav-item nav-link">Serviços</a>
-                        <a href="price.html" class="nav-item nav-link">Preços</a>
-                        <a href="class.html" class="nav-item nav-link">Classes</a>
-                        <a href="team.html" class="nav-item nav-link">Workshops</a>
-                        <a href="portfolio.html" class="nav-item nav-link">Asanas</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detalhes</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
+            </div>
+            <div class="modal-body" id="compileResult">
+                Wait the compiling process...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
-        <!-- Nav Bar End -->
+    </div>
+</div>
 
 
-        <!-- Hero Start -->
-        <div class="hero">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-text">
-                            <h1>Yoga Pratique para ter boa saúde</h1>
-                            <p>
-                                Para ter todos os benefícios do Yoga, é importante que seja praticada sob a orientação de um professor capacitado e que as práticas de Yoga sejam feitas regularmente
-                            </p>
-                            <div class="hero-btn">
-                                <a class="btn" href="">Junte-se a nós</a>
-                                <a class="btn" href="">Contato</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Começa o conteúdo da página -->
+<main role="main" class="flex-shrink-0">
+    <br><br>
+    <div class="container">
+        <br><br>
+        <div class="row g-3">
+            <h2>Projects</h2>
         </div>
-        <!-- Hero End -->
-
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="about-img">
-                            <img src="img/about.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <div class="section-header text-left">
-                            <p>Saiba mais sobre nós</p>
-                            <h2>Bem vindo a Yooga</h2>
-                        </div>
-                        <div class="about-text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
-                            </p>
-                            <a class="btn" href="">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="container my-3 p-3 bg-white rounded box-shadow">
+        <!--<h6 class="border-bottom border-gray pb-2 mb-0">Namespaces</h6>-->
+        <br>
+        <div id="namespaces">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Desc</th>
+                    <th scope="col">Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Akumos Platform</td>
+                    <td>
+                        <a href="https://github.com/apedrina/akumos-platform">akumos-platform</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Akumos CLI</td>
+                    <td>
+                        <a href="https://github.com/apedrina/akumos-cli">akumos-cli</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-        <!-- About End -->
+        <small class="d-block text-right mt-12">
+        </small>
+    </div>
+</main>
 
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Akumos Server.</span>
+    </div>
+</footer>
 
-        <!-- Service Start -->
-        <div class="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>O que nós fazemos</p>
-                    <h2>Yoga Para Saúde</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout"></i>
-                            </div>
-                            <h3>Cura das emoções</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item active">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-1"></i>
-                            </div>
-                            <h3>Alívio Corporal</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-2"></i>
-                            </div>
-                            <h3>Mente & Serenidade</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-3"></i>
-                            </div>
-                            <h3>Desfrute a tua vida</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-4"></i>
-                            </div>
-                            <h3>Corpo & Espiritualidade</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-yoga-pose"></i>
-                            </div>
-                            <h3>Corpo & Mente</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
+<!-- Principal JavaScript do Bootstrap
+================================================== -->
+<!-- Foi colocado no final para a página carregar mais rápido -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
 
+<script>
+    fetch("http://localhost:8080/projects?namespace=empty")
+        .then((response) => response.text())
+        .then((text) => {
+            var elem = document.getElementById('namespaces');
+            elem.innerHTML = text;
+        });
+</script>
 
-        <!-- Class Start -->
-        <div class="class">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Our Classes</p>
-                    <h2>Yoga - agende uma aula</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="class-filter">
-                            <li data-filter="*" class="filter-active">Todas Classes</li>
-                            <li data-filter=".filter-1">Pilates Yoga</li>
-                            <li data-filter=".filter-2">Hatha Yoga</li>
-                            <li data-filter=".filter-3">Vinyasa yoga</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row class-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-1.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-1.png" alt="Image">
-                                    <h3>Michele Silva</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Pilates Yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-2.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-2.png" alt="Image">
-                                    <h3>Kate Glover</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Iyengar Yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Domingo, Terça, Quinta</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-3.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-3.png" alt="Image">
-                                    <h3>Elina Ekman</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Ashtanga yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-4.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-4.png" alt="Image">
-                                    <h3>Lilly Fry</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Hatha Yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-5.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-5.png" alt="Image">
-                                    <h3>Olivia Yates</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Kundalini Yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="class-wrap">
-                            <div class="class-img">
-                                <img src="img/class-6.jpg" alt="Image">
-                            </div>
-                            <div class="class-text">
-                                <div class="class-teacher">
-                                    <img src="img/teacher-6.png" alt="Image">
-                                    <h3>Millie Harper</h3>
-                                    <a href="">+</a>
-                                </div>
-                                <h2>Vinyasa yoga</h2>
-                                <div class="class-meta">
-                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                                    <p><i class="far fa-clock"></i>9:00 - 10:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Class End -->
-        
-        
-        <!-- Discount Start -->
-        <div class="discount wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Maravilho Desconto</p>
-                    <h2>Ganhe <span>30%</span> Desconto para todas as Aulas</h2>
-                </div>
-                <div class="container discount-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
-                    </p>
-                    <a class="btn">Junte-se a nós</a>
-                </div>
-            </div>
-        </div>
-        <!-- Discount End -->
-        
-        
-        <!-- Price Start -->
-        <div class="price">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Yoga Package</p>
-                    <h2>Yoga Pricing Plan</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Basic</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>49<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="price-item featured-item">
-                            <div class="price-header">
-                                <div class="price-status">
-                                    <span>Popular</span>
-                                </div>
-                                <div class="price-title">
-                                    <h2>Standard</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>99<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>149<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Price End -->
-        
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Testimonial</p>
-                    <h2>Our Client Say!</h2>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+</body>
 
-
-        <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Yoga Trainer</p>
-                    <h2>Expert Yoga Trainer</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-1.jpg" alt="Image">
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <h2>Millie Harper</h2>
-                                <p>Yoga Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-2.jpg" alt="Image">
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <h2>Lilly Fry</h2>
-                                <p>Yoga Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-3.jpg" alt="Image">
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <h2>Elise Moran</h2>
-                                <p>Yoga Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-4.jpg" alt="Image">
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <h2>Kate Glover</h2>
-                                <p>Yoga Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-
-
-        <!-- Blog Start -->
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Yoga Articles</h2>
-                </div>
-                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-4.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-5.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-6.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
-
-
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <a href="index.html" class="footer-logo">Y<span>oo</span>ga</a>
-                        <h3>123 Street, New York, USA</h3>
-                        <div class="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>info@example.com</p>
-                        </div>
-                        <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                        </div>
-                        <div class="col-md-6">
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
 </html>
